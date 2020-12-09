@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"; //yarn add @types/styled-components -d
 
 export const GlobalStyle = createGlobalStyle`
 /**
@@ -173,4 +173,41 @@ img {
 table {
   border-collapse: collapse;
 } 
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  color: ${(props) => props.theme.colors.blue100};
+
+}
+h2 {
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  color: ${(props) => props.theme.colors.blue100};
+
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: ${(props) => props.theme.colors.blue100} ;
+
+}
+p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  
+}
   `;
