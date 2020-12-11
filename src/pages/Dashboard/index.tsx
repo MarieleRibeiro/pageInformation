@@ -7,10 +7,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  // height: 100vh;
-  width: 100%;
+  //height: 100%;
+  // width: 100%;
 `;
 export const Wrapper = styled.div`
+  // position: relative;
   width: 100%;
   max-width: 1222px;
   background-color: ${(props) => props.theme.colors.white};

@@ -208,6 +208,6 @@ p {
   font-weight: normal;
   font-size: 16px;
   line-height: 21px;
-  
+  color: ${(props) => props.theme.colors.gray200} ;
 }
   `;

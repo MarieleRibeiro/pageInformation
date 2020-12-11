@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import bitmap from "../../images/Bitmap.png";
 
 export const HeaderContainer = styled.div`
   h3 {
@@ -10,13 +9,16 @@ export const HeaderContainer = styled.div`
   }
 `;
 export const SectionNews = styled.div`
-  width: 302px;
+  position: absolute;
+  top: 220px;
+  right: 200px;
+  max-width: 302px;
   height: 443px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px 60px 122px 60px;
   background-color: ${(props) => props.theme.colors.blue};
-  color: ${(props) => props.theme.colors.white};
   box-shadow: 0px 24px 15px -20px rgba(9, 22, 89, 0.503865);
   border-radius: 10px;
   button {
@@ -26,14 +28,17 @@ export const SectionNews = styled.div`
     color: ${(props) => props.theme.colors.blue200};
     border-radius: 10px;
     margin-top: 30px;
+    cursor: pointer;
   }
-`;
-export const Section = styled.div`
-  display: flex;
-  img {
-    margin-right: 25px;
-    width: 635px;
-    height: 319px;
+  h2 {
+    margin-bottom: 15px;
+    color: ${(props) => props.theme.colors.white};
+  }
+  p {
+    color: ${(props) => props.theme.colors.white};
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
   }
 `;
 
@@ -42,17 +47,14 @@ export const Header = () => {
     <HeaderContainer>
       <h3>Development</h3>
       <h1>Compatible Inkjet Cartridge</h1>
-      <Section>
-        <img src={bitmap} alt="" />
-        <SectionNews>
-          <h2>Party Jokes Startling But Unnecessary</h2>
-          <p>
-            Life is a journey of twists and turns, peaks and valleys, mountains
-            to climb and oceans to explore.
-          </p>
-          <button>Read more</button>
-        </SectionNews>
-      </Section>
+      <SectionNews>
+        <h2>Party Jokes Startling But Unnecessary</h2>
+        <p>
+          Life is a journey of twists and turns, peaks and valleys, mountains to
+          climb and oceans to explore.
+        </p>
+        <button>Read more</button>
+      </SectionNews>
     </HeaderContainer>
   );
 };

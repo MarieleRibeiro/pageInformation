@@ -8,6 +8,9 @@ const theme = {
     blue100: "#232846",
     blue200: "#1B2455",
   },
+  fonts: {
+    openSans: `Open Sans, sans-serif`,
+  },
 } as const;
 
 export type MyTheme = typeof theme;
