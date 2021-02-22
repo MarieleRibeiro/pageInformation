@@ -1,4 +1,4 @@
-import { ContainerNews, SectionNew, Section } from './styles'
+import { Container, ContainerNews, SectionNew, Section, New } from './styles'
 import api from "../../services/api"
 
 import map from "../../assets/bitmap.jpg";
@@ -21,17 +21,29 @@ export const News = () => {
   }, []);
 
   return (
-    <ContainerNews>
-      <img src={map} />
-      <SectionNew>
-        {posts.map(post =>
-          <Section key={post.id}>
-            <h2>{post.title}</h2>
-            <p>{post.description}</p>
-          </Section>
-        )}
-      </SectionNew>
+    <Container>
+      <ContainerNews>
+        <img src={map} />
+        <SectionNew>
+          {posts.map(post =>
+            <Section key={post.id}>
+              <h2>{post.title}</h2>
+              <p>{post.description}</p>
+            </Section>
+          )}
+        </SectionNew>
+      </ContainerNews>
 
-    </ContainerNews>
+      <New>
+        <h2>Party Jokes Startling But Unnecessary</h2>
+        <p>
+          Life is a journey of twists and turns, peaks and valleys, mountains to
+          climb and oceans to explore.
+        </p>
+        <button>Read more</button>
+      </New>
+
+    </Container>
+
   );
 };
